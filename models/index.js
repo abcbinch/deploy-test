@@ -6,7 +6,11 @@ let config = require(__dirname + "/../config/config.js");
 //db 정보가 config.js에 있다면 여기로
 console.log("config 확인하기");
 console.log(config);
-config = config["development"];
+const env = process.env.NODE_ENV || "development"; //env 변수 추가
+// development 또는 production이라는 문자열이 들어있다.
+console.log("env 값은 ", env);
+console.log("NODE_ENV는 ", process.env.NODE_ENV);
+config = config[env]; //'development' => env
 //production을 읽어올 때 무조건 문자열 형태로 읽어야 하는데,
 //점 표기법상 점 뒤에 문자열을 적으면 안 된다.
 //config."production"  이렇게 쓰면 안된다는 것이다.

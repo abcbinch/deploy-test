@@ -15,10 +15,6 @@ host, username 등을 확인할 수 있다.
 3. app.js에서 db.sequelize.sync 잘 되었는지 확인
 4. controller에서 models/visitor 모듈 잘 불러왔는지 확인
 
-왜 delete(destroy)가 안 되냐
- => 껐다 키니까 된다. 
 
- 수정하기도 좀 살펴봐야겠다.
- 이제는 이게 안 돼.
 
 
